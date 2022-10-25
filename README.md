@@ -7,6 +7,10 @@ Required Install
 ================
 ```install docker```
 
+Run Docker Compose
+================
+```docker-compose up -d```
+
 Running Service
 ================
 ```go run main.go```

@@ -22,6 +22,7 @@ func (c *Client) Get(ctx context.Context, db *sqlx.DB, data interface{}, query *
 	q := queryString
 	q += where
 
+	log.Println(db.Rebind(q))
 	if err = db.GetContext(ctx, data, db.Rebind(q), args...); err != nil {
 		return
 	}
